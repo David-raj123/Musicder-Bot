@@ -16,7 +16,7 @@ bot.on('message', (ctx) => {
     var recmsg = ctx.message.text;
     var recfname = ctx.message.chat.first_name;
     if (recmsg == undefined) {
-        ctx.reply("Sorry, you are sending file. Send song's name or Jiosaavn's link to get results.")
+        ctx.reply("Sorry, You Are Sending File. Send Song's Name Or Jiosaavn's Link To Get Results.")
     } else {
         if ((recmsg.includes('https://www.jiosaavn.com/')) == true) {
             var options = {
@@ -25,10 +25,10 @@ bot.on('message', (ctx) => {
             };
             request(options, function(error, response) {
                 if (error) {
-                    ctx.reply("Sorry something went wrong make sure you are sending jiosaavn song link neither album or playlist link.\nIf this problem persists send a message at @t_projects.")
+                    ctx.reply("Sorry Something Went Wrong Make Sure You Are Sending Jiosaavn Song Link Neither Album Or Playlist Link.\nIf This Problem Occurs Again Contact My Master ::--> ""@David9010"".")
                 } else {
                     if (response.body.includes(`{"result": "false"}`) == true) {
-                        ctx.reply("Sorry this jiosaavn song link is invalid.\nMake sure you are sending jiosaavn song link neither album or playlist link.\nIf this problem persists send a message at @t_projects.")
+                        ctx.reply("Sorry This Jiosaavn Song Link Is Invalid.\nMake Sure You Are Sending Jiosaavn Song Link Neither Album Or Playlist Link.\nIf This Problem Occurs Again Contact My Master ::--> ""@David9010"".")
                     } else {
                         ctx.reply('<b><i>Sending you Appropriate Result 🎶</i></b>', { parse_mode: "HTML" })
                         var data = JSON.parse(response.body);
@@ -38,7 +38,7 @@ bot.on('message', (ctx) => {
                         var artist = data.primary_artists;
                         var id = data.id;
                         var dldlink = settings.musicder_url + "download/?id=" + id;
-                        var caption = ("🎵 " + songname + "\n\n🎨 Artist : " + artist + "\n🎶 Album : " + album);
+                        var caption = ("🎧 " + songname + "\n\n⭕ Artist : " + artist + "\n💢 Album : " + album);
                         ctx.reply(
                             caption,
                             Markup.inlineKeyboard([
@@ -50,7 +50,7 @@ bot.on('message', (ctx) => {
             });
 
         } else {
-            ctx.reply('<b><i>Sending you Appropriate Results 🎶</i></b>', { parse_mode: "HTML" })
+            ctx.reply('<b><i>Sending you Appropriate Results ⭕</i></b>', { parse_mode: "HTML" })
             var formattedmsg = recmsg.replace(/ /gi, '+');
             var options = {
                 'method': 'GET',
@@ -80,7 +80,7 @@ bot.on('message', (ctx) => {
                         var artistone = data[0].more_info.singers;
                         var id_one = data[0].id;
                         var dldlinkone = settings.musicder_url + "download/?id=" + id_one;
-                        var captionone = ("🎵 " + songnameone + "\n\n🎨 Artist : " + artistone + "\n🎶 Album : " + albumone);
+                        var captionone = ("🎧 " + songnameone + "\n\n⭕ Artist : " + artistone + "\n💢 Album : " + albumone);
                         ctx.reply(
                             captionone,
                             Markup.inlineKeyboard([
@@ -99,7 +99,7 @@ bot.on('message', (ctx) => {
                         var artisttwo = data[1].more_info.singers;
                         var id_two = data[1].id;
                         var dldlinktwo = settings.musicder_url + "download/?id=" + id_two;
-                        var captiontwo = ("🎵 " + songnametwo + "\n\n🎨 Artist : " + artisttwo + "\n🎶 Album : " + albumtwo);
+                        var captiontwo = ("🎧 " + songnametwo + "\n\n⭕ Artist : " + artisttwo + "\n💢 Album : " + albumtwo);
                         ctx.reply(
                             captiontwo,
                             Markup.inlineKeyboard([
@@ -117,7 +117,7 @@ bot.on('message', (ctx) => {
                         var artistthree = data[2].more_info.singers;
                         var id_three = data[2].id;
                         var dldlinkthree = settings.musicder_url + "download/?id=" + id_three;
-                        var captionthree = ("🎵 " + songnamethree + "\n\n🎨 Artist : " + artistthree + "\n🎶 Album : " + albumthree);
+                        var captionthree = ("🎧 " + songnamethree + "\n\n⭕ Artist : " + artistthree + "\n💢 Album : " + albumthree);
                         ctx.reply(
                             captionthree,
                             Markup.inlineKeyboard([
@@ -135,7 +135,7 @@ bot.on('message', (ctx) => {
                         var artistfour = data[3].more_info.singers;
                         var id_four = data[3].id;
                         var dldlinkfour = settings.musicder_url + "download/?id=" + id_four;
-                        var captionfour = ("🎵 " + songnamefour + "\n\n🎨 Artist : " + artistfour + "\n🎶 Album : " + albumfour);
+                        var captionfour = ("🎧 " + songnamefour + "\n\n⭕ Artist : " + artistfour + "\n💢 Album : " + albumfour);
                         ctx.reply(
                             captionfour,
                             Markup.inlineKeyboard([
@@ -153,7 +153,7 @@ bot.on('message', (ctx) => {
                         var artistfive = data[4].more_info.singers;
                         var id_five = data[4].id;
                         var dldlinkfive = settings.musicder_url + "download/?id=" + id_five;
-                        var captionfive = ("🎵 " + songnamefive + "\n\n🎨 Artist : " + artistfive + "\n🎶 Album : " + albumfive);
+                        var captionfive = ("🎧 " + songnamefive + "\n\n⭕ Artist : " + artistfive + "\n💢 Album : " + albumfive);
                         ctx.reply(
                             captionfive,
                             Markup.inlineKeyboard([
