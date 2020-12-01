@@ -5,7 +5,7 @@
 module.exports = {
 
     //your bot api key get it from botfather
-    bot_api_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    bot_api_key: "1402053093:AAHKwvBlejv2dapK4hR8PfL6AH_ePx4xiTM",
 
     //Jiosaavn api url {url format will be same as following}
     // create your jiosaavn api from https://github.com/cachecleanerjeet/jiosaavnapi
@@ -16,12 +16,12 @@ module.exports = {
     musicder_url: "https://musicder.net/",
 
     // Customize your /start message {html is supported}
-    start_message: "<b>Hey, 👋👋</b>\n\n<em>Welcome to <b>Musicder Bot</b>.\n\nJust send the Song's Name or, Jiosaavn Song's Link & You will get Best Matched Result(s) with their Download Link(s).\n\nBrought you by @tprojects</em>",
+    start_message: "<b>Hai, </b>\n\n  <b>Iam Jio Saavan DL Bot</b>.\n\nJust send the Song's Name or, Jiosaavn Song's Link & You Will Get Best Matched Result(s) With Their Download Link(s).\n\nMade With Love @David9010</em>",
 
     // Customize your /about message {html is supported}
-    about_message: "Created by <a href='https://tu.hin.life'>Tuhin Kanti Pal</a>.",
+    about_message: "Created by <a href='https://t.me/David9010'>David</a>.",
 
     // Customize your /help message {html is supported}
-    help_message: "Created by <a href='https://tu.hin.life'>Tuhin Kanti Pal</a>.",
+    help_message: "Ask My Master<a href='https://t.me/David0278'>David0278</a>.",
 
 };
