@@ -25,10 +25,10 @@ bot.on('message', (ctx) => {
             };
             request(options, function(error, response) {
                 if (error) {
-                    ctx.reply("Sorry Something Went Wrong Make Sure You Are Sending Jiosaavn Song Link Neither Album Or Playlist Link.\nIf This Problem Occurs Again Contact My Master ::--> ""@David9010"".")
+                    ctx.reply("Sorry Something Went Wrong Make Sure You Are Sending Jiosaavn Song Link Neither Album Or Playlist Link.\nIf This Problem Occurs Again Contact My Master ::--> @David9010.")
                 } else {
                     if (response.body.includes(`{"result": "false"}`) == true) {
-                        ctx.reply("Sorry This Jiosaavn Song Link Is Invalid.\nMake Sure You Are Sending Jiosaavn Song Link Neither Album Or Playlist Link.\nIf This Problem Occurs Again Contact My Master ::--> ""@David9010"".")
+                        ctx.reply("Sorry This Jiosaavn Song Link Is Invalid.\nMake Sure You Are Sending Jiosaavn Song Link Neither Album Or Playlist Link.\nIf This Problem Occurs Again Contact My Master ::--> @David9010.")
                     } else {
                         ctx.reply('<b><i>Sending you Appropriate Result 🎶</i></b>', { parse_mode: "HTML" })
                         var data = JSON.parse(response.body);
